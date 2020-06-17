@@ -15,13 +15,13 @@ class Song
   
   def artist=(artist)
     @artist=artist
-    if @artist != nil && @artist.songs.include?(self) ==false 
+    if @artist.songs.include?(self) ==false 
       @artist.song << self
     end
   end
   def genre=(genre)
     @genre = genre
-    if  @genre != nil && @genre.songs.include?(self) == false
+    if @genre.songs.include?(self) == false
       @genre.songs << self 
     end
   end
