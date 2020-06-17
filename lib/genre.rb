@@ -29,7 +29,7 @@ class Genre
     arr = [] 
     @songs.each do |song|
       if arr.include?(song.artist) == false
-        arr << song 
+        arr << song.artist 
       end
     end
     arr
