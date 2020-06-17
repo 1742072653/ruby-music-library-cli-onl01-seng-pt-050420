@@ -10,7 +10,7 @@ class Song
     if @artist != nil
       @artist.add_song(self)
     end
-    if @genre.songs.include?(self) == false && @genre != nil
+    if false && @genre != nil == @genre.songs.include?(self) 
       @genre.songs << self 
     end
   end
