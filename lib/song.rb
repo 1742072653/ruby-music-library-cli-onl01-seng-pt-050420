@@ -10,15 +10,16 @@ class Song
     if @artist != nil
       @artist.add_song(self)
     end
-    if  @genre != nil && @genre.songs.include?(self) == false
-      @genre.songs << self 
-    end
   end
   
   def self.all 
     @@all
   end
   
+  def genre=(genre)
+    if  @genre != nil && @genre.songs.include?(self) == false
+      @genre.songs << self 
+    end
   def save 
     @@all << self 
   end
