@@ -20,6 +20,7 @@ class Song
     if  @genre != nil && @genre.songs.include?(self) == false
       @genre.songs << self 
     end
+  end
   def save 
     @@all << self 
   end
