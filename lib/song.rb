@@ -7,8 +7,10 @@ class Song
     @name = name
     @artist = artist
     @genre = genre
-    @artist.add_song(self)
-    if @genre.songs.include?(self) == false 
+    if @artist != nil
+      @artist.add_song(self)
+    end
+    if @genre.songs.include?(self) == false && @genre != nil
       @genre.songs << self 
     end
   end
